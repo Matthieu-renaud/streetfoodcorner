@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Cave</title>
+  <title>My Cave - Les Vins</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 </head>
-
 <body>
-  
+
 <?php session_start(); ?>
 <header>
     <nav>
@@ -37,33 +35,23 @@
     </nav>
 </header>
 
+<main>
 
-  <main>
-
-    <div class="info">Bonjour 
-    <?php
-      if(isset($_SESSION['id']))
-      echo $_SESSION['id'];
-    ?>
-    <br>Bienvenue sur MyCave,<br> Un site créé par un expert en œnologie afin de réferencer uniquement la crème de la crème du vin.</div>
-
-    <br><br>
-
-    <div class="info info-bottle">
-      <h2>Dernière bouteille ajoutée</h2>
+  <div class="info info-bottle">
+      <h2>Liste des bouteilles</h2>
     </div>
 
-    <section class="card-container">
-
+<section class="card-container">
       <?php
-      
+
       $req = new PDO('mysql:host=sql11.freemysqlhosting.net;dbname=sql11416774', 'sql11416774', 'pRSWkI6pSn');
       
-      $stmt = $req->prepare("SELECT articles.id, articles.name, articles.year, articles.grapes, articles.country, articles.region, articles.description, articles.picture FROM articles ORDER BY date_creation DESC LIMIT 1");
+      $stmt = $req->prepare("SELECT articles.id, articles.name, articles.year, articles.grapes, articles.country, articles.region, articles.description, articles.picture FROM articles
+      ORDER BY id");
       $stmt->execute();
       
       $resultat = $stmt->fetchAll();
-      
+
       for ($i=0; $i < count($resultat); $i++) { 
         echo "<div class='card'>";
         echo "<div class='card-component'><div class='card-component-component'><h3 class='card-name'>{$resultat[$i]['name']}</h3>";
@@ -81,14 +69,11 @@
         echo "</div>";
       }
       
-
       ?>
 
-    </section>
+</section>
 
-
-  </main>
+</main>
 
 </body>
-
 </html>

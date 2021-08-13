@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+  --info:#0d6efd;
+  --blue: #002c6d;
+  --success: #198754;
+  --green: #003f22;
+  --danger: #dc3545;
+  --bordeaux: #631120;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* var(--bordeaux) */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline-width: 0;
+}
+
+body {
+  margin-top: 88px;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+}
+
+.menus {
+  display: inline;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+}
+
+.btn:hover,
+.menus:hover {
+  background-color:var(--blue) ;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav {
+  padding: 15px 0px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: var(--info);
+}
+
+.connect {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+form {
+  border: 1px solid var(--white);
+  padding: 10px 20px;
+  text-align: center;
+  width: 600px;
+  font-size: 1.5rem;
+}
+
+form>* {
+  margin: 10px;
+  padding: 5px 10px;
+}
+
+textarea,
+select,
+.input {
+  padding: 15px 10px 5px;
+  width: 100%;
+  background-color: var(--white);
+  border: none;
+  font-size: 1.2rem;
+}
+
+.file {
+  padding: 10px 10px 5px 0px;
+  width: 100%;
+  font-size: 1.2rem;
+} 
+
+#picture-label {
+  color: var(--white);
+}
+
+.picture {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  background: transparent no-repeat center;
+  background-size: cover;
+}
+
+.card-container {
+  width: 90%;
+  margin: auto;
+}
+
+.card {
+  display: inline-flex;
+  margin: 50px 0;
+  padding: 50px 100px 50px 50px;
+  flex-wrap: nowrap;
+  align-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row-reverse ;
+  border: 1px solid var(--white);
+}
+
+.no-marging {
+  margin: auto;
+}
+
+.card-component:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+}
+
+.card-component-component:first-child {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-evenly;
+}
+
+.card-component-component:last-child {
+  display: inline-flex;
+}
+
+.card-name {
+  font-size: 1.5rem;
+}
+
+.card-picture{
+  height: 400px;
+  width: 300px;
+  border-radius: 100%;
+  background: transparent no-repeat center;
+  background-size: cover;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif;
+  resize: none;
+  height: 110px;
+  width: 470px;
+  padding-right: 100px;
+  padding-top: 40px;
+}
+
+select {
+  width: 580px;
+}
+
+.form-container {
+  position: relative;
+  text-align: right;
+}
+
+label {
+  color: var(--black);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: text;
+}
+
+#textarea_label {
+  top: 30px;
+}
+
+input[type="submit"]{
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 10px 20px;
+  width: unset;
+  background-color: var(--info);
+  color: var(--white);
+  border: none;
+}
+
+.alert-container {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.error {
+  background-color: var(--danger);
+  padding: 20px 40px;
+}
+
+.info {
+  background-color: var(--info);
+  padding: 20px 40px;
+  font-size: 2rem;
+}
+
+.success {
+  background-color: var(--success);
+  padding: 20px 40px;
+}
+
+.alert-container form {
+  border: none;
+  padding: 0;
+  margin: auto;
+  text-align: center;
+  width: 600px;
+  font-size: 1.5rem;
+}
+
+.alert-container form>* {
+  background-color: var(--danger);
+}
+
+button {
+  background-color: var(--info);
+  color: var(--white);
+  border: none;
+  padding: 20px 40px;
+  font-size: 1.8rem;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+main {
+  display: block;
+  text-align: center;
+}
+
+.modif {
+  background-color: var(--info);
+}
+
+.suppr button,
+.suppr {
+  background-color: var(--danger);
+}
+
+.info-bottle {
+  margin-bottom: -25px;
+  background-color: var(--bordeaux);
+}
+
+.delete-this .card-name{  font-size: 2rem;
+
+}
