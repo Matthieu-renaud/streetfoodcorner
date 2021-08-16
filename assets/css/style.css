@@ -9,6 +9,7 @@
   --bordeaux: #631120;
   --white: #ffffff;
   --black: #000000;
+  --gray: #394148;
 }
 
 /* var(--bordeaux) */
@@ -28,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 80vh
 }
 
@@ -38,13 +40,13 @@ ul {
 
 .menus {
   display: inline;
-  font-size: 1.5rem;
-  padding: 15px 30px;
+  font-size: 2rem;
+  padding: 36px 50px;
 }
 
 .btn:hover,
 .menus:hover {
-  background-color:var(--blue) ;
+  background-color:var(--black) ;
 }
 
 header {
@@ -55,11 +57,18 @@ header {
 }
 
 nav {
-  padding: 15px 0px;
+  padding: 5px 15px;
   display: flex;
   justify-content:space-between;
   align-items: center;
-  background-color: var(--info);
+  background-color: var(--gray);
+}
+
+.logo {
+  background: transparent no-repeat center;
+  background-size: cover;
+  height: 100px;
+  width: 350px;
 }
 
 .connect {
@@ -116,14 +125,13 @@ select,
 
 .card {
   display: inline-flex;
-  margin: 50px 0;
-  padding: 50px 100px 50px 50px;
+  margin: 15px 15px 0 15px;
+  padding-bottom: 50px;
   flex-wrap: nowrap;
   align-content: center;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: row-reverse ;
+  flex-direction: column-reverse ;
   border: 1px solid var(--white);
 }
 
@@ -132,17 +140,18 @@ select,
 }
 
 .card-component:first-child {
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 400px;
+  height: 100px;
 }
 
 .card-component-component:first-child {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 150px;
   justify-content: space-evenly;
 }
 
@@ -155,9 +164,8 @@ select,
 }
 
 .card-picture{
-  height: 400px;
-  width: 300px;
-  border-radius: 100%;
+  height: 250px;
+  width: 325px;
   background: transparent no-repeat center;
   background-size: cover;
 }
@@ -251,6 +259,7 @@ a {
 }
 
 main {
+  margin-top: 50px;
   display: block;
   text-align: center;
 }
@@ -271,4 +280,27 @@ main {
 
 .delete-this .card-name{  font-size: 2rem;
 
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    overflow-x: hidden;
+    position :absolute;
+  }
+  nav {
+    flex-direction: column;
+  }
+  ul {
+    margin: 15px 0;
+  }
+  .menus {
+    padding: 20px 50vw;
+  }
+  .card {
+    margin: unset;
+    margin-top: 15px;
+  }
+  main {
+    margin-top: 150px;
+  }
 }

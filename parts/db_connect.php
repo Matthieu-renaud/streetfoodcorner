@@ -4,6 +4,6 @@ $dsn = 'mysql:dbname=streetfoodcorner;host=127.0.0.1';
 $user = 'root';
 $password = '';
 
-$dbh = new PDO($dsn, $user, $password);
+$req = new PDO($dsn, $user, $password);
 
 ?>

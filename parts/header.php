@@ -8,17 +8,28 @@
   <title>Street Food Corner</title>
 </head>
 <body>
-<?php session_start(); ?>
+<?php
+if(!isset($_SESSION['id'])) {
+  session_start();
+}
+?>
 <header>
-<nav>
-      <ul class="group_menus">
-      <?php 
-        if (isset($_SESSION['id'])) {
-        echo '<li class="menus btn_deco"><a href="./deconnexion.php">Déconnexion</a></li>';
-        } else {
-        echo '<li class="menus btn_co"><a href="./connexion.php">Connexion</a></li>';
-        }
-      ?>
-      </ul>
-    </nav>
+  <nav>
+    <ul class="group_menus">
+      <li>
+        <a href="../pages/index.php">
+          <div class="logo" style="background-image : url(../assets/img/logo.png)"></div>
+        </a>
+      </li>
+    </ul>
+    <ul class="group_menus">
+    <?php 
+      if (isset($_SESSION['id'])) {
+      echo '<li class="menus btn_deco"><a href="../pages/deconnexion.php">Déconnexion</a></li>';
+      } else {
+      echo '<li class="menus btn_co"><a href="../pages/connexion.php">Connexion</a></li>';
+      }
+    ?>
+    </ul>
+  </nav>
 </header>
