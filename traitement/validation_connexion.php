@@ -6,8 +6,7 @@
 <main>
   
   <?php
-
-  $errors[] = array();
+  $errors = [];
 
   $id = htmlspecialchars(strip_tags($_POST['id']));
   $email = htmlspecialchars(strip_tags($_POST['email']));
@@ -25,31 +24,28 @@
     $result = $sth->fetchAll();
 
     if (!empty($result)){
-    if (password_verify($mdp,$result[0]['mdp']) && $email == $result[0]['email']) {
-      if(!isset($_SESSION)) 
-      { 
-        session_start();
+      if (password_verify($mdp,$result[0]['mdp']) && $email == $result[0]['email']) {
+        if(!isset($_SESSION)) 
+        { 
+          session_start();
+        }
+        $_SESSION['id'] = $id;
+        echo "<h2 class=\"success\">Bonjour ".$_SESSION['id']."</h2>";
+      } else {
+        $errors['user']="Erreur sur l'identifiant, l'email ou le mot de passe";
       }
-      $_SESSION['id'] = $id;
-      echo "<h2 class=\"success\">Bonjour ".$_SESSION['id']."</h2>";
     } else {
-      $errors[0]=1;
+      $errors['user']="Erreur sur l'identifiant, l'email ou le mot de passe";
     }
-  } else {
-    $errors[0]=1;
-  }
 
 
     
   } else {
-    $errors[0]=1;
-    // foreach ($errors[$i] as $key => $value) {
-    //   if ($key==1 && $value==1) {
-    //     echo "<h2 class=\"error\">Erreur sur l'identifiant ou le mot de passe</h2>";
-    //   }
-    // }
-    if ($errors[0]) {
-      echo "<h2 class=\"error\">Erreur sur l'identifiant, le mot de passe ou l'email</h2>";
+    $errors['user']="Erreur sur l'identifiant, l'email ou le mot de passe";
+    if(!empty($errors)) {
+      foreach ($errors as $error) {
+        echo "<h3 class=\"error\">$error</h3>";
+      }
     }
   }
 
@@ -59,5 +55,5 @@
 
 </main>
 
-</body>
-</html>
+<?php include("../parts/footer.php"); ?>
+

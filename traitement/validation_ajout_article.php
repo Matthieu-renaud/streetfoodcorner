@@ -62,7 +62,7 @@
     $year = htmlspecialchars($_POST['year']);
     $yearBool= false;
     if ($year<1950) {
-      echo "<h3 class=\"error\">L'année est invalide";
+      echo "<h3 class=\"error\">L'année est invalide</h3>";
     } else {
       $yearBool = true;
       echo "<h3 class=\"success\">L'année est valide</h3>";
