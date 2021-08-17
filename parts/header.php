@@ -24,6 +24,18 @@ if(!isset($_SESSION['id'])) {
       </li>
     </ul>
     <ul class="group_menus">
+      <li class="menus">
+        <a href="../pages/index.php">Accueil</a>
+      </li>
+      <li class="menus">
+        <a href="../pages/formules.php">Nos Formules</a>
+      </li>
+      <li class="menus">
+        <a href="../pages/carte.php">Notre Carte</a>
+      </li>
+      <li class="menus">
+        <a href="../pages/contact.php">Contact</a>
+      </li>
     <?php 
       if (isset($_SESSION['id'])) {
       echo '<li class="menus btn_deco"><a href="../pages/deconnexion.php">Déconnexion</a></li>';

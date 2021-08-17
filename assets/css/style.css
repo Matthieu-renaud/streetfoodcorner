@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+@font-face {
+  font-family: "font1";
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+ }
+
+ @font-face {
+  font-family: "font2";
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+ }
+
 :root {
   --info:#0d6efd;
   --blue: #002c6d;
@@ -23,9 +33,9 @@
 
 body {
   margin-top: 88px;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--black);
-  color: var(--white);
+  font-family: "font1", 'Roboto', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,8 +50,9 @@ ul {
 
 .menus {
   display: inline;
-  font-size: 2rem;
-  padding: 36px 50px;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 40px;
 }
 
 .btn:hover,
@@ -50,14 +61,28 @@ ul {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-nav {
+header nav {
   padding: 5px 15px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: var(--gray);
+}
+
+footer {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+footer nav {
+  color: var(--white);
+  padding: 50px 150px;
   display: flex;
   justify-content:space-between;
   align-items: center;
@@ -161,6 +186,11 @@ select,
 
 .card-name {
   font-size: 1.5rem;
+  font-family: "font2";
+}
+
+.card-description {
+  font-size: 1rem;
 }
 
 .card-picture{
@@ -171,7 +201,7 @@ select,
 }
 
 textarea {
-  font-family: 'Roboto', sans-serif;
+  font-family: "font1", 'Roboto', sans-serif;
   resize: none;
   height: 110px;
   width: 470px;
@@ -290,7 +320,6 @@ main {
 @media only screen and (max-width: 500px) {
   header {
     overflow-x: hidden;
-    position :absolute;
   }
   nav {
     flex-direction: column;

@@ -2,6 +2,26 @@
 
   <main>
 
+    <section class="intro">
+
+      <div>
+        <div class="titre">STREET FOOD CORNER</div>
+        <div class="texte">Bienvenue sur le site du Street Food Corner, vous pouvez naviguez pour regarder les produits que nous proposons.</div>
+        <div class="bouton">Voir les produits</div>
+      </div>
+      
+      <div class="img_intro"></div>
+
+    </section>
+
+    <section class="plats">
+      
+    </section>
+
+    <section class="formule">
+      
+    </section>
+
     <section class="card-container">
 
       <?php
