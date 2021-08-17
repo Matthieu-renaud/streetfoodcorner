@@ -21,10 +21,10 @@
           echo "<div class='card-component'><div class='card-component-component'><h3 class='card-name'>{$resultat[$i]['name']}</h3>";
           echo "<h3 class='card-prix'><em>{$resultat[$i]['prix']}€</em></h3>";
           echo "<h3 class='card-description'>{$resultat[$i]['description']}</h3></div>";
-          // if(isset($_SESSION['id'])) {
-          // echo "<div class='card-component-component'><div class=\"modif\"><button id=\"modif{.$i}\"><a href=\"./edit_article.php?id={$resultat[$i]['id']}\">Modifier</a></button></div>";
-          // echo "<div class=\"suppr\"><button id=\"suppr{.$i}\"><a href=\"./del_article.php?id={$resultat[$i]['id']}\">Supprimer</a></button></div></div>";
-          // }
+          if(isset($_SESSION['id'])) {
+          echo "<div class='card-component-component'><div class=\"modif\"><button id=\"modif{.$i}\"><a href=\"./edit_article.php?id={$resultat[$i]['id_article']}\"><i class=\"fas fa-edit\"></i></a></button></div>";
+          echo "<div class=\"suppr\"><button id=\"suppr{.$i}\"><a href=\"./del_article.php?id={$resultat[$i]['id_article']}\"><i class=\"fas fa-trash-alt\"></i></a></button></div></div>";
+          }
           echo "</div>";
           echo "<div class='card-component'><div class=\"card-picture\" style=\"background-image: url(../assets/img/{$resultat[$i]['filename']}\"></div></div>";
           echo "</div>";

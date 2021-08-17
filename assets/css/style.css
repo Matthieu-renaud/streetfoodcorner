@@ -249,8 +249,8 @@ button {
   background-color: var(--info);
   color: var(--white);
   border: none;
-  padding: 20px 40px;
-  font-size: 1.8rem;
+  padding: 10px 20px;
+  font-size: 1.2rem;
 }
 
 a {
@@ -271,6 +271,11 @@ main {
 .suppr button,
 .suppr {
   background-color: var(--danger);
+}
+
+.suppr,
+.modif {
+  margin: 10px 5px 0;
 }
 
 .info-bottle {
