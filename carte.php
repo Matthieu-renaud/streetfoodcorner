@@ -1,4 +1,4 @@
-<?php include('../parts/header.php'); ?>
+<?php include('./parts/header.php'); ?>
 
   <main>
 
@@ -6,7 +6,7 @@
 
     <?php
 
-    include('../parts/db_connect.php');
+    include('./parts/db_connect.php');
     $stmt = $req->prepare("SELECT articles.id_article, articles.name, articles.description, articles.prix, images.filename FROM articles INNER JOIN images WHERE articles.id_image = images.id_image AND articles.active = '1' AND articles.hors_formule = '1' ORDER BY articles.id_cat");
     $stmt->execute();
 
@@ -26,7 +26,7 @@
         echo "<div class=\"suppr\"><button id=\"suppr{.$i}\"><a href=\"./del_article.php?id={$resultat[$i]['id_article']}\"><i class=\"fas fa-trash-alt\"></i></a></button></div></div>";
         }
         echo "</div>";
-        echo "<div class='card-component'><div class=\"card-picture\" style=\"background-image: url(../assets/img/{$resultat[$i]['filename']}\"></div></div>";
+        echo "<div class='card-component'><div class=\"card-picture\" style=\"background-image: url(./assets/img/{$resultat[$i]['filename']}\"></div></div>";
         echo "</div>";
       }
     }
@@ -40,6 +40,6 @@
 
 <?php
 
-include('../parts/footer.php');
+include('./parts/footer.php');
 
 ?>

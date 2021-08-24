@@ -1,8 +1,7 @@
-<?php include('../parts/header.php'); ?>
+<?php include('./parts/header.php'); ?>
 
 
-
-  <form action="../traitement/validation_connexion.php" method="post">
+  <form action="./traitement/validation_connexion.php" method="post">
     <h1>Connexion</h1>
     <div class="form-container">
       <label for="id">ID</label>
@@ -20,5 +19,5 @@
     <input class="btn" type="submit" value="Valider">
   </form>
 
-</body>
-</html>
+  
+  <?php include('./parts/footer.php'); ?>

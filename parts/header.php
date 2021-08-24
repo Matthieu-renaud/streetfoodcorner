@@ -28,19 +28,19 @@ if(!isset($_SESSION['id'])) {
         <a href="./index.php">Accueil</a>
       </li>
       <li class="menus">
-        <a href=".formules.php">Nos Formules</a>
+        <a href="./formules.php">Nos Formules</a>
       </li>
       <li class="menus">
-        <a href=".carte.php">Notre Carte</a>
+        <a href="./carte.php">Notre Carte</a>
       </li>
       <li class="menus">
-        <a href=".contact.php">Contact</a>
+        <a href="./contact.php">Contact</a>
       </li>
     <?php 
       if (isset($_SESSION['id'])) {
-      echo '<li class="menus btn_deco"><a href=".deconnexion.php">Déconnexion</a></li>';
+      echo '<li class="menus btn_deco"><a href="./deconnexion.php">Déconnexion</a></li>';
       } else {
-      echo '<li class="menus btn_co"><a href=".connexion.php">Connexion</a></li>';
+      echo '<li class="menus btn_co"><a href="./connexion.php">Connexion</a></li>';
       }
     ?>
     </ul>

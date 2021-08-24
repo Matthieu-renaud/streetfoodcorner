@@ -4,13 +4,13 @@
 
     <section class="intro">
 
-      <div>
+      <div class="intro-container">
         <div class="titre">STREET FOOD CORNER</div>
         <div class="texte">Bienvenue sur le site du Street Food Corner, vous pouvez naviguez pour regarder les produits que nous proposons.</div>
-        <div class="bouton">Voir les produits</div>
+        <div class="btn"><a href="./carte.php">Voir les produits</a></div>
       </div>
       
-      <div class="img_intro"></div>
+      <div class="intro-img"></div>
 
     </section>
 
