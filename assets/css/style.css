@@ -360,6 +360,25 @@ main {
 
 }
 
+.plat-card {
+  display: inline-flex;
+  height: 40vw;
+  width: 50%;
+  background: transparent no-repeat center;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+}
+
+.plat-name {
+  color: var(--white);
+  font-size: 4rem;
+  position: absolute;
+  top: 70%;
+  left: 15%;
+}
+
+
 @media only screen and (max-width: 500px) {
   header {
     overflow-x: hidden;

@@ -10,7 +10,7 @@
     <div class="form-container">
       <label for="email">Email</label>
       <input class="input" type="email" name="email" email="id">
-    </div>
+    </div> 
     <div class="form-container">
       <label for="mdp">Mot de passe</label>
       <input class="input" type="password" name="mdp" id="mdp">
